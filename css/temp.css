@@ -1,0 +1,229 @@
+/* start global */
+*{
+    margin:0;
+    padding: 0;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* end global */
+/* start header */
+header{
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 33px 9%;
+    background-color: transparent;
+}
+header .logo{
+    font-size: 30px;
+    font-weight: 700;
+}
+header .nav-list{
+    display: flex;
+}
+header .nav-list a{
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 60px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.6s ease;
+}
+header .nav-list a:hover{
+    border-color: white;
+}
+header .menu{
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 8;
+    display: none;
+}
+/* end header */
+/* start home */
+.home{
+    color: white;
+    padding: 0 19%;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+.home h5{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+.home h4{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.home h1{
+    font-size: 90px;
+    margin-bottom: 0 0 45px;
+    font-family: 'Permanent Marker', cursive;
+}
+.home p{
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+.home img{
+    width: 488px;
+    height: auto;
+}
+.home a{
+    display: inline-block;
+    background-color: #4d9559;
+    padding: 12px 30px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    line-height: 1.4;
+    transition: all 0.6s ease;
+}
+.home .play{
+    margin-left: 20px;
+    background-color: transparent;
+    border-color: white;
+}
+.home i{
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.home a:hover{
+    background-color: transparent;
+    border-color: white;
+    transform: translateX(8px);
+}
+/* end home */
+/* start footer */
+.icons{
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+}
+.icons i{
+    display: block;
+    margin: 26px 0;
+}
+.icons i:hover{
+    color: #4d9559 ;
+    transform: translateY(-4px);
+}
+.scroll{
+    position: absolute;
+    bottom: 6%;
+    right: 9%;
+}
+.scroll i{
+    display: block;
+    padding: 8px 12px;
+    font-size: 25px;
+    background-color: #4d9559;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+.scroll i:hover{
+    transform: translateY(-4px);
+}
+/* end footer */
+/* start media */
+@media (max-width: 1255px) {
+    header{
+        padding: 15px 3%;
+    }
+    .icons{
+        padding: 0 3%;
+    }
+    .scroll{
+        right: 3%;
+    }
+}
+@media (max-width: 1199px) {
+    .home{
+        padding: 0 12%;
+    }
+}
+@media (max-width: 1020px) {
+    .home img{
+        width: 100%;
+    }
+    .home h1{
+        margin: 0 0 30px;
+        font-size: 75px;
+    }
+    .home h5{
+        margin-bottom: 25px;
+    }
+}
+@media (max-width: 991px) {
+    .home{
+        padding: 0 3%;
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .home .text{
+        padding-top: 115px;
+    }
+    .home .image{
+        text-align: center;
+    }
+    .home img{
+        width: 400px;
+    }
+    .icons{
+        display: none;
+    }
+    .scroll{
+        display: none;
+    }
+}
+@media (max-width: 769px) {
+    header .menu{
+        display: block;
+    }
+    header .nav-list{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 240px;
+        height: 30vh;
+        display: flex;
+        background-color: #4d9559;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        transition: all 0.6s ease;
+        justify-content: center;
+    }
+    header .nav-list a{
+        display: block;
+        margin: 6px 0;
+    }
+    .nav-list.open{
+        right: 0;
+    }
+}
+@media (max-width: 680px) {
+    .home img{
+        width: 100%;
+    }
+}
+/* end media */
